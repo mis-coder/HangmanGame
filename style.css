@@ -1,0 +1,143 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color:rgb(255, 211, 92);
+    color:rgb(66, 66, 112);
+    font-family:Arial, Helvetica, sans-serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    overflow:hidden;
+    height:80vh;
+}
+
+.game-name{
+    margin:25px 0 0;
+    font-size:40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.game-title{
+    font-weight:bold;
+}
+.game-container{
+    height:450px;
+    width:450px;
+    margin:auto;
+    position:relative;
+    padding:60px 40px;
+}
+
+.wrong-letters-container{
+   position:absolute;
+   top:20%;
+   right:20%;
+   display:flex;
+   flex-direction:column;
+   text-align:right;
+}
+
+.wrong-letters-container p{
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.word{
+    display:flex;
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    transform:translateX(-50%);
+    margin-bottom:20px;
+}
+
+.letter{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    border-bottom:3px solid #2980b9;
+    font-size:30px;
+    height:50px;
+    width:20px;
+    margin:0 3px;
+    color:rgb(190, 102, 102);
+}
+
+.figure-container{
+    stroke:rgb(190, 102, 102);
+    stroke-width:4px;
+    stroke-linecap: round;
+    fill:transparent;
+}
+
+.figure-part{
+    display:none;
+}
+
+.popup-container{
+    background-color:rgba(27, 27, 44, 0.603);
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    display:none;
+    /* display:flex; */
+    align-items:center;
+    justify-content:center;
+}
+
+.popup{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background-color:rgb(196, 45, 45);
+    border-radius:5px;
+    box-shadow:0 15px 10px 3px rgba(27, 27, 44, 0.603);
+    padding:15px 50px;
+}
+.popup-container h2{
+    color:#fff;
+    font-size:20px;
+}
+
+.popup button{
+    margin:30px 0;
+    padding:6px 12px;
+    border-radius:5px;
+    border:0;
+    background-color:rgb(41, 41, 90);
+    color:#fff;
+    cursor:pointer;
+}
+
+.popup button:active{
+    transform: scale(1.1);
+}
+
+.popup button:focus{
+    outline:0;
+}
+
+.notification-container{
+    background-color:rgba(196, 45, 45, 0.774);
+    color:#fff;
+    position:absolute;
+    bottom:-100px;
+    padding:20px 20px;
+    border-radius:5px;
+    transition:transform 0.5s ease-in-out;
+}
+
+.notification-container p{
+    margin:0;
+    font-size: 15px;
+}
+
+.notification-container.show{
+    transform: translateY(-100px);
+}
